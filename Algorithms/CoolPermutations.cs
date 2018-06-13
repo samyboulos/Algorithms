@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Algorithms.Algorithms
 {
-    class Permutations: Algorithm
+    class CoolPermutations: Algorithm
     {
 
         public void Run()
