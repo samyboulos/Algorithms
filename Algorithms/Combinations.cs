@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Algorithms.Algorithms
+
+
+namespace Algorithms
 {
     /// <summary>
     /// Gets all 3 element subset sets out of a set

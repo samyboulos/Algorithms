@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace Algorithms.Algorithms
+
+namespace Algorithms
 {
     class CoolPermutations: Algorithm
     {
