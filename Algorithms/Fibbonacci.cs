@@ -12,7 +12,8 @@ namespace Algorithms
 
         public void Run()
         {
-            GetFibDynamic(20);
+            long result = GetFibDynamic(20);
+            Console.WriteLine(result);
         }
 
         public Fibbonacci()
