@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace Algorithms.Algorithms
 {
-    class PermutationsWithoutDups : Algorithm
+    class Permutations : Algorithm
     {
 
         string s = "ABCD";
 
         public void Run()
         {
-            foreach (var permutation in Permutations(s))
+            foreach (var permutation in GetPermutations(s))
                 Console.WriteLine(permutation);
         }
 
-        List<string> Permutations(string s)
+        List<string> GetPermutations(string s)
         {
             List<string> list = new List<string>();
             if (s.Length == 1)
@@ -28,7 +28,7 @@ namespace Algorithms.Algorithms
 
             for (int x= 0; x < s.Length ; x++)
             {
-                foreach (var permutation in Permutations(s.Remove(x, 1)))
+                foreach (var permutation in GetPermutations(s.Remove(x, 1)))
                 {
                     list.Add(s.Substring(x, 1) + permutation);
                 }

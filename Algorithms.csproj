@@ -48,7 +48,7 @@
     <Compile Include="Algorithms\Combinations.cs" />
     <Compile Include="Algorithms\DFS.cs" />
     <Compile Include="Algorithms\CoolPermutations.cs" />
-    <Compile Include="Algorithms\PermutationsWithoutDups.cs" />
+    <Compile Include="Algorithms\Permutations.cs" />
     <Compile Include="Algorithms\PowerSet.cs" />
     <Compile Include="Algorithms\ThreeSum.cs" />
     <Compile Include="Algorithms\TowersOfHanoi.cs" />
