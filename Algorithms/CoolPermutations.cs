@@ -8,7 +8,6 @@ namespace Algorithms.Algorithms
 {
     class CoolPermutations: Algorithm
     {
-
         public void Run()
         {
             foreach (var permutation in GetPermutations("A,B,C,D".Split(',')))
