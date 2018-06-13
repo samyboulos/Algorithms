@@ -63,10 +63,8 @@ namespace Algorithms
                     Visited.Add(node);
                     Console.WriteLine(node);
                     queue.Enqueue(node);
-                }
-                
+                }  
             }
-            
         }
 
        
