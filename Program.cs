@@ -5,7 +5,7 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            Algorithm a = new Permutations();
+            Algorithm a = new MergeSortedLists();
             a.Run();
         }
     }
