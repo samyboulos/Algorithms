@@ -34,6 +34,14 @@ namespace Algorithms
 
         }
 
+
+        /// <summary>
+        /// Keeps a pointer the current element in each list and loops through them
+        /// Finds the minumum value, adds that value to the result 
+        /// and advances the pointer that points to it. 
+        /// </summary>
+        /// <param name="lists"></param>
+        /// <returns></returns>
         public ListNode MergeKLists(ListNode[] lists)
         {
 
@@ -67,6 +75,7 @@ namespace Algorithms
 
                 var newResult = new ListNode(minValue);
 
+                //Add the value to the tail of the results list
                 if (first == null)
                 {
                     first = newResult;
@@ -79,6 +88,7 @@ namespace Algorithms
                 }
 
 
+                //Advance the pointer if it points to a next value or else remove it if it is as the tail
                 if (currents[minList].next == null)
                     currents.RemoveAt(minList);
                 else

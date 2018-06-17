@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Algorithms
 {
-    class PowerSet: Algorithm
+    class CoolPowerSet: Algorithm
     {
         public void Run()
         {

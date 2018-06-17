@@ -51,8 +51,8 @@
     <Compile Include="Algorithms\CoolPermutations.cs" />
     <Compile Include="Algorithms\Fibbonacci.cs" />
     <Compile Include="Algorithms\MergeSortedLists.cs" />
-    <Compile Include="Algorithms\Permutations.cs" />
-    <Compile Include="Algorithms\PowerSet.cs" />
+    <Compile Include="Algorithms\RecursivePermutations.cs" />
+    <Compile Include="Algorithms\CoolPowerSet.cs" />
     <Compile Include="Algorithms\ThreeSum.cs" />
     <Compile Include="Algorithms\TowersOfHanoi.cs" />
     <Compile Include="Models\ListNode.cs" />
@@ -62,7 +62,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Algorithms\PhoneNumberToLettersRecursive.cs" />
+    <Compile Include="Algorithms\RecursivePhoneNumberToLetters.cs" />
     <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
