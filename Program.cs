@@ -5,7 +5,7 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            Algorithm a = new MergeSortedLists();
+            Algorithm a = new CoolPhoneNumberToLetters();
             a.Run();
         }
     }

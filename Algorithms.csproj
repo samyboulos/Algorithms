@@ -46,6 +46,7 @@
     <Compile Include="Algorithms\BFS.cs" />
     <Compile Include="Algorithms\Calculator.cs" />
     <Compile Include="Algorithms\Combinations.cs" />
+    <Compile Include="Algorithms\CoolPhoneNumberToLetters.cs" />
     <Compile Include="Algorithms\DFS.cs" />
     <Compile Include="Algorithms\CoolPermutations.cs" />
     <Compile Include="Algorithms\Fibbonacci.cs" />
@@ -61,6 +62,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algorithms\PhoneNumberToLettersRecursive.cs" />
     <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
