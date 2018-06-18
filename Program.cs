@@ -5,7 +5,7 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            Algorithm a = new CoolPhoneNumberToLetters();
+            Algorithm a = new BinarySearch();
             a.Run();
         }
     }

@@ -12,32 +12,33 @@ namespace Algorithms
 
         public void Run()
         {
-            string result = Add("101011001", "1111");
-            Console.WriteLine(result);
+            string result = Add("11", "1");
         }
 
 
         private string Add(string op1, string op2)
         {
             int maxLength = op1.Length > op2.Length ? op1.Length : op2.Length;
-            op1= op1.PadLeft(maxLength, '0');
-            op2= op2.PadLeft(maxLength, '0');
 
-            var op1Array = op1.Reverse().ToArray();
-            var op2Array = op2.Reverse().ToArray();
+            op1 = new String(op1.Reverse().ToArray());
+            op2 = new String(op2.Reverse().ToArray());
+
             int carryOver = 0;
             StringBuilder result = new StringBuilder();
 
             for (int x = 0; x < maxLength; x++)
             {
-                var sum = int.Parse(op1Array[x].ToString()) + int.Parse(op2Array[x].ToString()) + carryOver;
+                int op1Int = (op1.Length <= x) ? 0 : int.Parse(op1[x].ToString());
+                int op2Int = (op2.Length <= x) ? 0 : int.Parse(op2[x].ToString());
+
+                var sum = op1Int + op2Int + carryOver;
                 var column = sum % baseCalc;
                 carryOver = sum / baseCalc;
                 result.Insert(0, column);
             }
 
             if (carryOver != 0) result.Insert(0, carryOver);
-            return result.ToString(); ;
+            return result.ToString(); 
         }
 
     }
