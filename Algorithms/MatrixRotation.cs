@@ -25,7 +25,7 @@ namespace Algorithms
 	if (n == 0 || n==1)
 	 return ;
 	 
-	int layers = (int)Math.Ceiling((double)n / 2);
+	int layers = n / 2;
 
 	for (int layer = 0; layer < layers; layer++)
 	{
