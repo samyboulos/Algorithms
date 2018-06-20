@@ -5,7 +5,7 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            Algorithm a = new BinarySearch();
+            Algorithm a = new MatrixRotation();
             a.Run();
         }
     }
