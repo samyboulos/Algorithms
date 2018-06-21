@@ -61,19 +61,19 @@ namespace Algorithms
                 return false;
 
             //now knowing the row we use binary search on the row
-            int left = 0, right = width - 1;
-            while (left <= right)
+            int start = 0, end = width - 1;
+            while (start <= end)
             {
-                int median = (left + right) / 2;
+                int median = (start + end) / 2;
 
                 if (matrix[row, median] == target)
                     return true;
                 // If x greater, ignore left half
                 else if (matrix[row, median] < target)
-                    left = median + 1;
+                    start = median + 1;
                 // If x is smaller, ignore right half
                 else
-                    right = median - 1;
+                    end = median - 1;
             }
 
             return false;
