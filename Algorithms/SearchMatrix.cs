@@ -64,7 +64,7 @@ namespace Algorithms
             int left = 0, right = width - 1;
             while (left <= right)
             {
-                int median = left + (right - left) / 2;
+                int median = (left + right) / 2;
 
                 if (matrix[row, median] == target)
                     return true;
