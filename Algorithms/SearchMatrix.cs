@@ -26,26 +26,26 @@ namespace Algorithms
 
         public bool DoSearchMatrix(int[,] matrix, int target)
         {
-            int height = matrix.GetLength(0);
-            int width = matrix.GetLength(1);
+            int rows = matrix.GetLength(0);
+            int columns = matrix.GetLength(1);
 
-            if (height == 0 || width == 0 || matrix[0, 0] > target || matrix[height - 1, width - 1] < target)
+            if (rows == 0 || columns == 0 || matrix[0, 0] > target || matrix[rows - 1, columns - 1] < target)
                 return false;
 
             if (matrix[0, 0] == target)
                 return true;
 
-            int row = height == 1 ? 0 : -1;
+            int row = rows == 1 ? 0 : -1;
             //Try to find the row first
-            for (int h = 0; h < height; h++)
+            for (int h = 0; h < rows; h++)
             {
-                if (matrix[height - 1, 0] < target)
+                if (matrix[rows - 1, 0] < target)
                 {
-                    row = height - 1;
+                    row = rows - 1;
                     break;
                 }
 
-                if (h < height - 1 && matrix[h, 0] <= target && matrix[h + 1, 0] > target)
+                if (h < rows - 1 && matrix[h, 0] <= target && matrix[h + 1, 0] > target)
                 {
                     row = h;
                     break;
@@ -61,7 +61,7 @@ namespace Algorithms
                 return false;
 
             //now knowing the row we use binary search on the row
-            int start = 0, end = width - 1;
+            int start = 0, end = columns - 1;
             while (start <= end)
             {
                 int median = (start + end) / 2;
