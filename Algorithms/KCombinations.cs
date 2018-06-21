@@ -9,7 +9,7 @@ namespace Algorithms
     /// Gets all K (in this case 3) element subset sets out of a set.
     /// K has to be known at design time. This algorithm does not work for variable K.
     /// </summary>
-    class KCombinationsIterative: Algorithm
+    class KCombinations: Algorithm
     {
         public void Run()
         {
