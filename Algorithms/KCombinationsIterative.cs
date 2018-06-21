@@ -8,7 +8,7 @@ namespace Algorithms
     /// <summary>
     /// Gets all 3 element subset sets out of a set
     /// </summary>
-    class Combinations: Algorithm
+    class KCombinationsIterative: Algorithm
     {
         public void Run()
         {
