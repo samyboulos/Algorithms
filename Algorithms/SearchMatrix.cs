@@ -68,11 +68,9 @@ namespace Algorithms
 
                 if (matrix[row, median] == target)
                     return true;
-
                 // If x greater, ignore left half
-                if (matrix[row, median] < target)
+                else if (matrix[row, median] < target)
                     left = median + 1;
-
                 // If x is smaller, ignore right half
                 else
                     right = median - 1;
