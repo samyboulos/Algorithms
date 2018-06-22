@@ -1,4 +1,6 @@
-public class ClimbStairs
+namespace Algorithms
+{
+public class ClimbStairs : Algorithm
 {
 	public int DoClimbStairs(int n)
 	{
@@ -16,4 +18,5 @@ public class ClimbStairs
 
 		return steps[n];
 	}
+}
 }
