@@ -5,7 +5,7 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            Algorithm a = new MatrixRotation();
+            Algorithm a = new LargestRectangleDP();
             a.Run();
         }
     }

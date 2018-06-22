@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Algorithms
 {
-    class MatrixRotation: Algorithm
+    class MatrixRotation : Algorithm
     {
 
         public void Run()
@@ -22,36 +22,38 @@ namespace Algorithms
         private void Rotate(int[,] matrix)
         {
             int n = matrix.GetLength(0);
-	if (n == 0 || n==1)
-	 return ;
-	 
-	int layers = n / 2;
+            if (n == 0 || n == 1)
+                return;
 
-	for (int layer = 0; layer < layers; layer++)
-	{
-		for (int swap = 0; swap < (n - 2 * layer -1); swap++)
-		{
-			int offset = n-layer-1;
-			
-			//top -> right
-			int right= matrix[layer+ swap, offset];
-			matrix[layer+ swap, offset] = matrix[layer, layer + swap];
-			
-			//right -> bottom
-			int bottom = matrix[n-layer-1, offset-swap];
-			matrix[n-layer-1, offset-swap] = right;
-			
-			//bottom -> left
-			int left= matrix[offset-swap, layer];
-			matrix[offset-swap, layer] = bottom;
-			
-			//left-> top
-			matrix[layer, layer+swap] = left;
-		}
-		
-	}
+            int layers = n / 2;
+
+            for (int layer = 0; layer < layers; layer++)
+            {
+                for (int swap = 0; swap < (n - 2 * layer - 1); swap++)
+                {
+                    int offset = n - layer - 1;
+
+                    //top -> right
+                    int right = matrix[layer + swap, offset];
+                    matrix[layer + swap, offset] = matrix[layer, layer + swap];
+
+                    //right -> bottom
+                    int bottom = matrix[n - layer - 1, offset - swap];
+                    matrix[n - layer - 1, offset - swap] = right;
+
+                    //bottom -> left
+                    int left = matrix[offset - swap, layer];
+                    matrix[offset - swap, layer] = bottom;
+
+                    //left-> top
+                    matrix[layer, layer + swap] = left;
+                }
+
+            }
         }
-        private void Print (int[,] matrix)
+
+
+        private void Print(int[,] matrix)
         {
             int n = matrix.GetLength(0);
             int layers = (int)Math.Ceiling((double)n / 2);

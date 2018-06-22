@@ -10,7 +10,7 @@ namespace Algorithms
     ///The rules of this problem state that: 
     ///-Integers in each row are sorted from left to right.
     ///-The first integer of each row is greater than the last integer of the previous row.
-    public class SearchMatrix:Algorithm
+    public class MatrixSearch:Algorithm
     {
 
         public void Run()
@@ -20,7 +20,7 @@ namespace Algorithms
                                     {23,30,34,50}};
 
 
-            bool result = new SearchMatrix().DoSearchMatrix(matrix, 30);
+            bool result = new MatrixSearch().DoSearchMatrix(matrix, 30);
         }
 
 

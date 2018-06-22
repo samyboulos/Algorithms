@@ -46,17 +46,18 @@
     <Compile Include="Algorithms\BFS.cs" />
     <Compile Include="Algorithms\Adder.cs" />
     <Compile Include="Algorithms\BinarySearch.cs" />
-    <Compile Include="Algorithms\BinarySearchRecursive.cs" />
-    <Compile Include="Algorithms\Combinations.cs" />
     <Compile Include="Algorithms\CoolPhoneNumberToLetters.cs" />
     <Compile Include="Algorithms\DFS.cs" />
     <Compile Include="Algorithms\CoolPermutations.cs" />
     <Compile Include="Algorithms\Fibbonacci.cs" />
+    <Compile Include="Algorithms\KCombinations.cs" />
+    <Compile Include="Algorithms\LargestRectangleDP.cs" />
     <Compile Include="Algorithms\MatrixRotation.cs" />
+    <Compile Include="Algorithms\MatrixSetZero.cs" />
     <Compile Include="Algorithms\MergeSortedLists.cs" />
     <Compile Include="Algorithms\RecursivePermutations.cs" />
     <Compile Include="Algorithms\CoolPowerSet.cs" />
-    <Compile Include="Algorithms\SearchMatrix.cs" />
+    <Compile Include="Algorithms\MatrixSearch.cs" />
     <Compile Include="Algorithms\ThreeSum.cs" />
     <Compile Include="Algorithms\TowersOfHanoi.cs" />
     <Compile Include="Models\ListNode.cs" />
@@ -67,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Algorithms\RecursivePhoneNumberToLetters.cs" />
+    <Compile Include="Algorithms\AllSubstrings.cs" />
     <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
