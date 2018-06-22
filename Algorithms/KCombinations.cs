@@ -6,9 +6,10 @@ using System.Collections.Generic;
 namespace Algorithms
 {
     /// <summary>
-    /// Gets all 3 element subset sets out of a set
+    /// Gets all K (in this case 3) element subset sets out of a set.
+    /// K has to be known at design time. This algorithm does not work for variable K.
     /// </summary>
-    class Combinations: Algorithm
+    class KCombinations: Algorithm
     {
         public void Run()
         {
