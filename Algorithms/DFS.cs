@@ -71,7 +71,6 @@ namespace Algorithms
                     stack.Pop();
                 }
             }
-
         }
 
        
