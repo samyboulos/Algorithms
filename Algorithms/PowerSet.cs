@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Algorithms
 {
-    class CoolPowerSet: Algorithm
+    class PowerSet: Algorithm
     {
         public void Run()
         {
-            foreach (var set in GetPowerSet("A,B,C,D".Split(',')))
+            foreach (var set in CoolPowerSet("A,B,C,D".Split(',')))
             {
                 string output = "";
                 foreach (var element in set)
@@ -21,6 +21,8 @@ namespace Algorithms
                 Console.WriteLine(output);
             }
         }
+
+
 
         /// <summary>
         /// We build up the solution starting with the empty set {}
@@ -35,7 +37,7 @@ namespace Algorithms
         /// </summary>
         /// <param name="inputArray"></param>
         /// <returns></returns>
-        public List<List<string>> GetPowerSet (string[] inputArray)
+        public List<List<string>> CoolPowerSet (string[] inputArray)
         {
             var originalSet = inputArray.ToList();
             var powerSet = new List<List<string>>();

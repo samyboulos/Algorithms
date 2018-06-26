@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Algorithms
 {
-    class LargestRectangleDP: Algorithm
+    class LargestRectangle: Algorithm
     {
 
         public void Run()
@@ -14,6 +14,10 @@ namespace Algorithms
             int result = GetLargestDP(new int[] { 2, 1, 5, 6, 2, 3 });
         }
 
+        
+        
+        
+        
         /// <summary>
         /// This algorithm uses something close to Dynamic Programming.
         /// We need to calculate right and left bound of each elemenent but instead of iterating all the way
