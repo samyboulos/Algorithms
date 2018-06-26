@@ -16,11 +16,13 @@ namespace Algorithms
         /// And we move p2 from A all the way to the end (D) and then increment p1
         /// A B C D
         /// ^
-        /// ^----^
+        /// ^-----^
+        /// Output: A, AB, ABC, ABCD
         /// 
         /// A B C D
         ///   ^
         ///   ^---^
+        /// Output B, BC, BCD  
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
