@@ -46,11 +46,11 @@
     <Compile Include="Algorithms\BFS.cs" />
     <Compile Include="Algorithms\Adder.cs" />
     <Compile Include="Algorithms\BinarySearch.cs" />
-    <Compile Include="Algorithms\CoolPhoneNumberToLetters.cs" />
+    <Compile Include="Algorithms\PhoneNumberToLetters.cs" />
     <Compile Include="Algorithms\DFS.cs" />
-    <Compile Include="Algorithms\CoolPermutations.cs" />
+    <Compile Include="Algorithms\Permutations.cs" />
     <Compile Include="Algorithms\Fibbonacci.cs" />
-    <Compile Include="Algorithms\KCombinations.cs" />
+    <Compile Include="Algorithms\Combinations.cs" />
     <Compile Include="Algorithms\LargestRectangleDP.cs" />
     <Compile Include="Algorithms\MatrixRotation.cs" />
     <Compile Include="Algorithms\MatrixSetZero.cs" />
@@ -67,7 +67,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Algorithms\RecursivePhoneNumberToLetters.cs" />
     <Compile Include="Algorithms\AllSubstrings.cs" />
     <None Include="App.config" />
   </ItemGroup>

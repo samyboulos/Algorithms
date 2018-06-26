@@ -5,7 +5,7 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            Algorithm a = new SpiralMatrix();
+            Algorithm a = new Permutations();
             a.Run();
         }
     }

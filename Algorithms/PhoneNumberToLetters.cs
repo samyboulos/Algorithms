@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Algorithms
 {
-    public class CoolPhoneNumberToLetters: Algorithm
+    public class PhoneNumberToLetters: Algorithm
     {
         private string[] table = new string[] { "", "", "a,b,c", "d,e,f", "g,h,i", "j,k,l", "m,n,o", "p,q,r,s", "t,u,v", "w,x,y,z" };
 
         public void Run()
         {
-            var result = LetterCombinations("23");
+            var result = CoolLetterCombinations("23");
         }
 
         /// <summary>
@@ -28,7 +28,7 @@ namespace Algorithms
         /// <param name="digits"></param>
         /// <returns></returns>
 
-        public IList<string> LetterCombinations(string digits)
+        public IList<string> CoolLetterCombinations(string digits)
         {
             List<string> intermediates = new List<string>();
 
@@ -54,6 +54,37 @@ namespace Algorithms
             }
 
             return intermediates;
+        }
+
+
+        /// <summary>
+        /// This is the recursive solution
+        /// </summary>
+        /// <param name="digits"></param>
+        /// <returns></returns>
+        public IList<string> LetterCombinationsRecursive(string digits)
+        {
+            if (digits.Length == 0)
+                return new List<string>();
+
+            if (digits.Length == 1)
+                return table[Int32.Parse(digits)].Split(',');
+
+            int leftMostDigit = Int32.Parse(digits[0].ToString());
+            string[] letters = table[leftMostDigit].Split(',');
+            IList<string> result = new List<string>();
+
+            foreach (string letter in letters)
+            {
+                int length = digits.Length;
+                string remainingDigits = digits.Substring(1, length - 1);
+                foreach (string s in CoolLetterCombinations(remainingDigits))
+                {
+                    result.Add(letter + s);
+                }
+            }
+
+            return result;
         }
 
     }

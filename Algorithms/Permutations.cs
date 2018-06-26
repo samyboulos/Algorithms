@@ -8,7 +8,7 @@ namespace Algorithms
     {
         public void Run()
         {
-            foreach (var permutation in GetPermutations("A,B,C,D".Split(',')))
+            foreach (var permutation in CoolPermutations("A,B,C,D".Split(',')))
             {
                 string output = "";
                 foreach (var element in permutation)
@@ -34,48 +34,34 @@ namespace Algorithms
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        public List<List<string>> GetPermutations(string[] input)
+        public List<List<string>> CoolPermutations(string[] input)
         {
             var permutationsBuildUp = new List<List<string>>();
+            var solution = new List<List<string>>();
+            int n = input.Length;
 
-            string s = input[0];
             //Buid up the solution starting with the the first element A
-            List<string> firstPermutation = new List<string>();
-            firstPermutation.Add(input[0]);
-            permutationsBuildUp.Add(firstPermutation);
+            permutationsBuildUp.Add(new List<string> { input[0] });
 
             //add each element in the input to each element in the intermediate set, once in every position 
-            for (int x= 1; x<input.Length;x++)
+            for (int x= 1; x < n ;x++)
             {
-                string letterToInsert = input[x];
+                string newLetter = input[x];
 
-                //Take a snapshot of the count as the set keeps growing
-                int countSnapshot1 = permutationsBuildUp.Count;
-
-                for (int y = 0; y < countSnapshot1; y++)
+                foreach (var existingPermutation in permutationsBuildUp.ToArray())
                 {
-                    var existingPermutation = permutationsBuildUp[y];
-
-                    var countSnapshot2 = existingPermutation.Count + 1;
                     //insert the character in each position for each existing permutation 
-                    for (int z = 0; z < countSnapshot2; z++)
+                    for (int z = 0; z < existingPermutation.ToArray().Length + 1; z++)
                     {
                         List<string> newPermutation = new List<string>(existingPermutation);
-                        newPermutation.Insert(z, letterToInsert);
+                        newPermutation.Insert(z, newLetter);
                         permutationsBuildUp.Add(newPermutation);
+                        if (newPermutation.Count == input.Length)
+                        {
+                            solution.Add(newPermutation);
+                        }
                     }
                     
-                }
-            }
-
-            //Here wer filter the permutations whose length =4 
-            //We could have avoided this loop by keeping a separate list for the final solution
-            var solution = new List<List<string>>();
-            foreach (var permutation in permutationsBuildUp)
-            {
-                if (permutation.Count == input.Length)
-                {
-                    solution.Add(permutation);
                 }
             }
 
@@ -83,7 +69,12 @@ namespace Algorithms
         }
 
 
-        List<string> GetPermutationsRecursive(string s)
+        /// <summary>
+        /// This is the recursive solution to the same problem
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
+        public List<string> GetPermutationsRecursive(string s)
         {
             List<string> list = new List<string>();
             if (s.Length == 1)

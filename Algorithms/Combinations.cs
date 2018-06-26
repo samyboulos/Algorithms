@@ -5,25 +5,28 @@ using System.Collections.Generic;
 
 namespace Algorithms
 {
-    /// <summary>
-    /// Gets all K (in this case 3) element subset sets out of a set.
-    /// K has to be known at design time. This algorithm does not work for variable K.
-    /// </summary>
-    class KCombinations: Algorithm
+   
+    class Combinations: Algorithm
     {
         public void Run()
         {
-            foreach (string set in GetCombinations("A,B,C,D,E,F,G".Split(',')))
+            foreach (string set in GetCombinationsFixed("A,B,C,D,E,F,G".Split(',')))
             {
                 Console.WriteLine(set);
             }
         }
 
-        public string[] GetCombinations (string[] input)
+
+        /// <summary>
+        /// Gets all K (in this case 3) element subset sets out of a set.
+        /// K has to be known at design time. This algorithm does not work for variable K.
+        /// </summary>
+        /// 
+        public string[] GetCombinationsFixed (string[] input)
         {
             List<string> results = new List<string>();
             /*
-             we start by three pointers i,j,k at the first three elements
+            We start by three pointers i,j,k at the first three elements
             A B C D E F G
             i j k
             so the first element is ABC
