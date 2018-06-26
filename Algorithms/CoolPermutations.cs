@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Algorithms
 {
-    class CoolPermutations: Algorithm
+    class Permutations: Algorithm
     {
         public void Run()
         {
@@ -80,6 +80,27 @@ namespace Algorithms
             }
 
             return solution;
+        }
+
+
+        List<string> GetPermutationsRecursive(string s)
+        {
+            List<string> list = new List<string>();
+            if (s.Length == 1)
+            {
+                list.Add(s);
+                return list;
+            }
+
+            for (int x = 0; x < s.Length; x++)
+            {
+                foreach (var permutation in GetPermutationsRecursive(s.Remove(x, 1)))
+                {
+                    list.Add(s.Substring(x, 1) + permutation);
+                }
+            }
+
+            return list;
         }
     }
 }

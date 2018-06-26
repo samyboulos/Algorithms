@@ -55,9 +55,9 @@
     <Compile Include="Algorithms\MatrixRotation.cs" />
     <Compile Include="Algorithms\MatrixSetZero.cs" />
     <Compile Include="Algorithms\MergeSortedLists.cs" />
-    <Compile Include="Algorithms\RecursivePermutations.cs" />
     <Compile Include="Algorithms\CoolPowerSet.cs" />
     <Compile Include="Algorithms\MatrixSearch.cs" />
+    <Compile Include="Algorithms\SpiralMatrix.cs" />
     <Compile Include="Algorithms\ThreeSum.cs" />
     <Compile Include="Algorithms\TowersOfHanoi.cs" />
     <Compile Include="Models\ListNode.cs" />

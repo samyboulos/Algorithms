@@ -16,7 +16,7 @@ namespace Algorithms
                                     {23,30,34,50},
                                     {9,12,17,22}};
             Rotate(matrix);
-            Print(matrix);
+            new SpiralMatrix().SpiralOrder(matrix);
         }
 
         private void Rotate(int[,] matrix)
@@ -53,33 +53,7 @@ namespace Algorithms
         }
 
 
-        private void Print(int[,] matrix)
-        {
-            int n = matrix.GetLength(0);
-            int layers = (int)Math.Ceiling((double)n / 2);
-
-            for (int layer = 0; layer < layers; layer++)
-            {
-
-                for (int topx = layer; topx < n - layer; topx++)
-                {
-                    Console.WriteLine(matrix[layer, topx]);
-                }
-                for (int righty = layer; righty < n - layer; righty++)
-                {
-
-                    Console.WriteLine(matrix[righty, n - layer - 1]);
-                }
-                for (int bottomx = n - layer - 1; bottomx >= layer; bottomx--)
-                {
-                    Console.WriteLine(matrix[n - layer - 1, bottomx]);
-                }
-                for (int lefty = n - layer - 1; lefty >= layer; lefty--)
-                {
-                    Console.WriteLine(matrix[lefty, layer]);
-                }
-            }
-        }
+       
 
     }
 }
