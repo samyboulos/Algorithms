@@ -46,6 +46,7 @@
     <Compile Include="Algorithms\BFS.cs" />
     <Compile Include="Algorithms\Adder.cs" />
     <Compile Include="Algorithms\BinarySearch.cs" />
+    <Compile Include="Algorithms\ContinuousSubarraySum.cs" />
     <Compile Include="Algorithms\PhoneNumberToLetters.cs" />
     <Compile Include="Algorithms\DFS.cs" />
     <Compile Include="Algorithms\Permutations.cs" />
