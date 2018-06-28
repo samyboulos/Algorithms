@@ -49,7 +49,7 @@
     <Compile Include="Algorithms\ClimbStairs.cs" />
     <Compile Include="Algorithms\ContinuousSubarraySum.cs" />
     <Compile Include="Algorithms\MaxSubarray.cs" />
-    <Compile Include="Algorithms\PhoneNumberToLetters.cs" />
+    <Compile Include="Algorithms\PhoneNumbers.cs" />
     <Compile Include="Algorithms\DFS.cs" />
     <Compile Include="Algorithms\Permutations.cs" />
     <Compile Include="Algorithms\Fibbonacci.cs" />
