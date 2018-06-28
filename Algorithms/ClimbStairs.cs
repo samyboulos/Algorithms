@@ -2,7 +2,19 @@ namespace Algorithms
 {
 public class ClimbStairs : Algorithm
 {
-	public int DoClimbStairs(int n)
+    public void Run()
+    {
+       int result = ClimbStairsDP(14);    
+    }
+
+
+
+    /// <summary>
+    /// This solution used Dynamic Programming
+    /// </summary>
+    /// <param name="n"></param>
+    /// <returns></returns>
+    public int ClimbStairsDP(int n)
 	{
 		if (n == 1) return 1;
 
