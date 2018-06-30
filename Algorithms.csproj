@@ -48,6 +48,7 @@
     <Compile Include="Algorithms\BinarySearch.cs" />
     <Compile Include="Algorithms\ClimbStairs.cs" />
     <Compile Include="Algorithms\ContinuousSubarraySum.cs" />
+    <Compile Include="Algorithms\List\DeleteNodes.cs" />
     <Compile Include="Algorithms\MaxSubarray.cs" />
     <Compile Include="Algorithms\PhoneNumbers.cs" />
     <Compile Include="Algorithms\DFS.cs" />
@@ -57,9 +58,10 @@
     <Compile Include="Algorithms\LargestRectangle.cs" />
     <Compile Include="Algorithms\MatrixRotation.cs" />
     <Compile Include="Algorithms\MatrixSetZero.cs" />
-    <Compile Include="Algorithms\MergeSortedLists.cs" />
+    <Compile Include="Algorithms\List\MergeSortedLists.cs" />
     <Compile Include="Algorithms\PowerSet.cs" />
     <Compile Include="Algorithms\MatrixSearch.cs" />
+    <Compile Include="Algorithms\List\DeleteNodeFromEnd.cs" />
     <Compile Include="Algorithms\SpiralMatrix.cs" />
     <Compile Include="Algorithms\ThreeSum.cs" />
     <Compile Include="Algorithms\TowersOfHanoi.cs" />

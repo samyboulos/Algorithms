@@ -16,8 +16,6 @@ namespace Algorithms
 
         
         
-        
-        
         /// <summary>
         /// This algorithm uses something close to Dynamic Programming.
         /// We need to calculate right and left bound of each elemenent but instead of iterating all the way
