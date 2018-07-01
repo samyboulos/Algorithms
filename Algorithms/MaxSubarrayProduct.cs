@@ -12,18 +12,67 @@ namespace Algorithms
         public void Run()
         {
 
-            int result = MaxProductBF(new int[] { 2, -5, -2, -4, 3});
+            int result = MaxProductBF(new int[] { 2, -5, -2, -4, 3 });
+
+            int result2 = MaxProductDP(new int[] { 2, -5, -2, -4, 3 });
         }
 
 
-        public int MaxProduct(int[] nums)
+        
+
+
+        private int Max(int i1, int i2)
         {
-            throw new NotImplementedException();
+            return i1 > i2 ? i1 : i2;
+        }
+
+        private int Min(int i1, int i2)
+        {
+            return i1 > i2 ? i2 : i1;
         }
 
 
         /// <summary>
-        /// This is the Brute Force solution
+        /// This is the Dynamic Programming solution
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <returns></returns>
+        public int MaxProductDP(int[] nums)
+        {
+
+            int max = nums[0];
+            int currentMax = nums[0];
+            int currentMin = nums[0];
+
+            for (int x = 1; x < nums.Length; x++)
+            {
+                int currentVal = nums[x];
+
+                if (currentVal > 0)
+                {
+                    currentMax = Max(currentVal, currentVal * currentMax);
+                    currentMin = Min(currentVal, currentVal * currentMin);
+
+                }
+                else
+                {
+                    int temp = currentMax;
+                    currentMax = Max(currentVal, currentVal * currentMin);
+                    currentMin = Min(currentVal, currentVal * temp);
+                }
+
+                max = Max(max, currentMax);
+
+            }
+
+            return max;
+
+
+        }
+        
+
+        /// <summary>
+        /// This is the Brute Force solution I created
         /// </summary>
         /// <param name="nums"></param>
         /// <returns></returns>
@@ -47,22 +96,6 @@ namespace Algorithms
             return max;
         }
 
-        private int Max(int i1, int i2)
-        {
-            return i1 > i2 ? i1 : i2;
-        }
-
-        private int Abs(int i)
-        {
-            if (i == 0) return 0;
-
-            return i > 0 ? i : -1 * i;
-        }
-
-        private int MaxAbs(int i1, int i2)
-        {
-            return Abs(i1) > Abs(i2) ? i1 : i2;
-        }
 
     }
 }

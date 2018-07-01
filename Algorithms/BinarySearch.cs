@@ -5,14 +5,14 @@ namespace Algorithms
         public void Run()
         {
             int[] input = new[] { 1, 3, 4, 6, 8, 12, 14, 22, 33, 34, 45, 55 };
-            int result7 = DoBinarySearch(input, 7);
-            int result8 = DoBinarySearch(input, 8);
+            int result7 = Do(input, 7);
+            int result8 = Do(input, 8);
 
-            int result7Recur = DoBinarySearchRecursive(input, 0, input.Length, 7);
-            int result8Recur = DoBinarySearchRecursive(input, 0, input.Length, 8);
+            int result7Recur = DoRecursive(input, 0, input.Length, 7);
+            int result8Recur = DoRecursive(input, 0, input.Length, 8);
         }
 
-        public int DoBinarySearch(int[] input, int value)
+        public int Do(int[] input, int value)
         {
             int start = 0;
             int end = input.Length - 1;
@@ -39,7 +39,7 @@ namespace Algorithms
 
         }
 
-        public int DoBinarySearchRecursive(int[] input, int start, int end, int value)
+        public int DoRecursive(int[] input, int start, int end, int value)
         {
 
             if (start == end)
@@ -56,11 +56,11 @@ namespace Algorithms
             }
             else if (input[median] > value)
             {
-                return DoBinarySearchRecursive(input, start, median - 1, value);
+                return DoRecursive(input, start, median - 1, value);
             }
             else
             {
-                return DoBinarySearchRecursive(input, median + 1, end, value);
+                return DoRecursive(input, median + 1, end, value);
             }
         }
     }
