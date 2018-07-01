@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Algorithms
 {
-    class MaxProductSubarray : IAlgorithm
+    class MaxSubarrayProduct : IAlgorithm
     {
 
         public void Run()
@@ -18,30 +18,7 @@ namespace Algorithms
 
         public int MaxProduct(int[] nums)
         {
-            if (nums == null || nums.Length == 0)
-                return 0;
-
-            int prevMax = nums[0];
-            int prevMaxAbs = nums[0];
-            int max = nums[0];
-
-            for (int x = 1; x < nums.Length; x++)
-            {
-                int currentWithoutPrev = nums[x];
-                int currentWithPrev = nums[x] * prevMax;
-                int currentWithPrevAbs = nums[x] * prevMaxAbs;
-
-                int localMax = Max(Max(currentWithPrev, currentWithoutPrev), currentWithPrevAbs);
-                int localMaxAbs = MaxAbs(MaxAbs(currentWithPrevAbs, currentWithoutPrev), currentWithPrevAbs);
-
-            
-                prevMax = localMax;
-                prevMaxAbs = localMaxAbs;
-                max = Max(max, localMax);
-            }
-
-            return max;
-
+            throw new NotImplementedException();
         }
 
 

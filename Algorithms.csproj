@@ -42,17 +42,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Algorithms\Algorithm.cs" />
-    <Compile Include="Algorithms\BFS.cs" />
+    <Compile Include="Algorithms\IAlgorithm.cs" />
+    <Compile Include="Algorithms\Graph\BFS.cs" />
     <Compile Include="Algorithms\Adder.cs" />
     <Compile Include="Algorithms\BinarySearch.cs" />
     <Compile Include="Algorithms\DP\ClimbStairs.cs" />
-    <Compile Include="Algorithms\ContinuousSubarraySum.cs" />
-    <Compile Include="Algorithms\MaxProductSubarray.cs" />
+    <Compile Include="Algorithms\SubarraySum.cs" />
+    <Compile Include="Algorithms\MaxSubarrayProduct.cs" />
     <Compile Include="Algorithms\List\DeleteNodes.cs" />
     <Compile Include="Algorithms\DP\MaxSubarray.cs" />
     <Compile Include="Algorithms\PhoneNumbers.cs" />
-    <Compile Include="Algorithms\DFS.cs" />
+    <Compile Include="Algorithms\Graph\DFS.cs" />
     <Compile Include="Algorithms\Permutations.cs" />
     <Compile Include="Algorithms\DP\Fibbonacci.cs" />
     <Compile Include="Algorithms\Combinations.cs" />
@@ -73,7 +73,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Algorithms\AllSubstrings.cs" />
+    <Compile Include="Algorithms\Substrings.cs" />
     <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

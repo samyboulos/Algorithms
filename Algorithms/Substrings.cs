@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Algorithms
 {
-    public class AllSubstrings : IAlgorithm
+    public class Substrings : IAlgorithm
     {
 
         public void Run()
