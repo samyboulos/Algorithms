@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Algorithms
 {
-    public class SpiralMatrix: Algorithm
+    public class SpiralMatrix: IAlgorithm
     {
         public void Run()
         {

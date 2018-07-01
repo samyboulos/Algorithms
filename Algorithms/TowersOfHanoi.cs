@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Algorithms
 {
-    class TowersOfHanoiWithDFS : Algorithm
+    class TowersOfHanoiWithDFS : IAlgorithm
     {
         int N = 5;
         HashSet<string> Visited = new HashSet<string>();

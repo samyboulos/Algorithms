@@ -10,7 +10,7 @@ namespace Algorithms
     /// I solved a variant of this problem on leetcode with slightly different rules
     /// Where the criteria is that sum = multiples of target and min subarray length is 2 
     /// </summary>
-    public class ContinuousSubarraySum: Algorithm
+    public class ContinuousSubarraySum: IAlgorithm
     {
 
         public void Run()

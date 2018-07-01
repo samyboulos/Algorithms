@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Algorithms
 {
-    public class Adder : Algorithm
+    public class Adder : IAlgorithm
     {
         int baseCalc =2;
 

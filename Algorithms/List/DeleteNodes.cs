@@ -3,7 +3,7 @@ using Algorithms.Models;
 namespace Algorithms
 {
 
-    public class DeleteNodes: Algorithm
+    public class DeleteNodes: IAlgorithm
     {
 
         public void Run()

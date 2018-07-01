@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Algorithms
 {
-    class MatrixRotation : Algorithm
+    class MatrixRotation : IAlgorithm
     {
 
         public void Run()

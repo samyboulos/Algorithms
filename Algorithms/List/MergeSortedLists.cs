@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Algorithms
 {
-    class MergeSortedLists : Algorithm
+    class MergeSortedLists : IAlgorithm
     {
         //This holds pointers to the current node in each of the K lists
         List<ListNode> currents = new List<ListNode>();

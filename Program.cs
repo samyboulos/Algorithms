@@ -5,7 +5,7 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            Algorithm a = new ContinuousSubarraySum();
+            IAlgorithm a = new MaxProductSubarray();
             a.Run();
         }
     }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Algorithms
 {
-    class Permutations: Algorithm
+    class Permutations: IAlgorithm
     {
         public void Run()
         {

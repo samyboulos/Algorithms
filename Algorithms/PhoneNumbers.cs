@@ -10,7 +10,7 @@ namespace Algorithms
     /// This problem is to change phone numebers to corresponding combination of letters
     /// </summary>
 
-    public class PhoneNumbers : Algorithm
+    public class PhoneNumbers : IAlgorithm
     {
         private string[] table = new string[] { "", "", "a,b,c", "d,e,f", "g,h,i", "j,k,l", "m,n,o", "p,q,r,s", "t,u,v", "w,x,y,z" };
 

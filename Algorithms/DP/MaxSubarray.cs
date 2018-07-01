@@ -1,7 +1,7 @@
 
 namespace Algorithms
 {
-    class MaxSubArray : Algorithm
+    class MaxSubArray : IAlgorithm
     {
 
         public void Run()

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Algorithms
 {
-    class ThreeSum: Algorithm
+    class ThreeSum: IAlgorithm
     {
 
         public void Run()

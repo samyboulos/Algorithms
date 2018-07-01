@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Algorithms
 {
-    class LargestRectangle: Algorithm
+    class LargestRectangle: IAlgorithm
     {
 
         public void Run()

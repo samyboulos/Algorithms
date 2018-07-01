@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Algorithms
 {
-    class Fibbonacci:Algorithm
+    class Fibbonacci:IAlgorithm
     {
         Dictionary<int, long> cache = new Dictionary<int, long>();
 

@@ -1,6 +1,6 @@
 namespace Algorithms
 {
-public class ClimbStairs : Algorithm
+public class ClimbStairs : IAlgorithm
 {
     public void Run()
     {

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Algorithms
 {
-    class DFS : Algorithm
+    class DFS : IAlgorithm
     {
 
         Stack<Vertex> stack = new Stack<Vertex>();

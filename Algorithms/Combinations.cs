@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace Algorithms
 {
    
-    class Combinations: Algorithm
+    class Combinations: IAlgorithm
     {
         public void Run()
         {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Algorithms
 {
-    class MatrixSetZero: Algorithm
+    class MatrixSetZero: IAlgorithm
     {
         private int rows, columns;
 

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Algorithms
 {
-    class BFS : Algorithm
+    class BFS : IAlgorithm
     {
 
         Queue <Vertex> queue = new Queue<Vertex>();

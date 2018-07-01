@@ -4,7 +4,7 @@ namespace Algorithms
 {
 
 
-    public class DeleteNodeFromEnd : Algorithm
+    public class DeleteNodeFromEnd : IAlgorithm
     {
 
         public void Run()

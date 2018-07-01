@@ -1,6 +1,6 @@
 namespace Algorithms
 {
-    public class BinarySearch: Algorithm
+    public class BinarySearch: IAlgorithm
     {
         public void Run()
         {
