@@ -52,7 +52,6 @@ namespace Algorithms
                 {
                     currentMax = Max(currentVal, currentVal * currentMax);
                     currentMin = Min(currentVal, currentVal * currentMin);
-
                 }
                 else
                 {
