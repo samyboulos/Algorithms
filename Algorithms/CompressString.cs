@@ -1,50 +1,49 @@
+void Main()
+{
+	Compress(new char[] {'a','a','b','b','c','c','c'});
+}
+
+
+
 public int Compress(char[] chars)
 {
- 
- if (chars.Length==0)
- 
- return 0;
- 
- if (chars.Length==1)
- 
- return 1;
- 
 
- int write =0;
- char previous = '0';
- int countSeen =0;
- int totalCount= 0;
- 
-	for (int read = 0; read < chars.Length; read ++)
+	if (chars.Length == 0)
+		return 0;
+
+	if (chars.Length == 1)
+		return 1;
+
+
+	int write = 0;
+	char previous = '0';
+	int countCurrent = 0;
+	int countPrev =0;
+
+	for (int read = 0; read < chars.Length; read++)
 	{
-		char current= chars[read];
-
-		if (chars[read] != previous) //Starting new char
+		char current = chars[read];
+ 		countCurrent++;
+		
+		if (chars[read] != previous || read== chars.Length-1) //Starting new char
 		{
-			if (countSeen > 1)
+			//write count of previous
+			if (countPrev > 1)
 			{
-                write += WriteCount(countSeen, write, chars);
-				countSeen =0;
+				write += WriteCount(countPrev, write, chars);
+				countPrev = 0;
 			}
-			else 
-			{
-				countSeen++;
-			}
-
-			chars[write] = current;//Write the character
-			write++; //advance only one char
-		}
-        else  //repeated char
-		{
-			countSeen ++;
+			chars[write] = current; //Write the new character
+			write++; //advance one char
 		}
 		
-		previous= current;
-		
+
+		previous = current;
+
 	}
-	
+
 	return 0;
- 
+
 }
 
 int WriteCount(int countSeen, int write, char[] chars)
