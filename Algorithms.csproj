@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algorithms\CompressString.cs" />
     <Compile Include="Algorithms\DP\CoinChange.cs" />
     <Compile Include="Algorithms\DP\HouseRobber.cs" />
     <Compile Include="Algorithms\IAlgorithm.cs" />
