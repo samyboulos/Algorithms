@@ -50,6 +50,7 @@
     <Compile Include="Algorithms\Adder.cs" />
     <Compile Include="Algorithms\BinarySearch.cs" />
     <Compile Include="Algorithms\DP\ClimbStairs.cs" />
+    <Compile Include="Algorithms\List\PartitionList.cs" />
     <Compile Include="Algorithms\SubarraySum.cs" />
     <Compile Include="Algorithms\MaxSubarrayProduct.cs" />
     <Compile Include="Algorithms\List\DeleteNodes.cs" />

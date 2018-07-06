@@ -5,7 +5,7 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            IAlgorithm a = new CompressString();
+            IAlgorithm a = new PartitionList();
             a.Run();
         }
     }
