@@ -17,43 +17,34 @@ public class ListNode
 	public ListNode(int x) { val = x; }
 }
 
-public class Solution
-{
+public class Solution {
+    public ListNode Partition(ListNode head, int x) 
+    {
+        if (head == null)
+			return null;
 
-	
-	public ListNode Partition(ListNode head, int value)
-	{
 		ListNode head2 = null;
 		ListNode tail2 = null;
-		ListNode dummyHead = new ListNode(0);
-
-		if(head==null)
-		return null;
-		
-
-		dummyHead.next= head;
-
+		ListNode dummyHead = new ListNode(0) {next= head} ;
 		ListNode current = dummyHead;
         
 		while (current.next != null)
 		{
-			current.val.Dump();
-			if (current.next.val >= value)
+			if (current.next.val >= x)
 			{
-				current.next.val.Dump();
 				//Add copy of the node to the second partition
 				ListNode node = new ListNode(current.next.val);
 				if (head2 == null)
-				{
+                {
 					head2 = node;
-					tail2 = node;
-				}
+                }
 				else
-				{
+                {
 					tail2.next = node;
-					tail2 = node;
-				}
-
+                }
+				
+                //Either way
+				tail2 = node;
 
 				if (current == dummyHead)
 				{
@@ -62,16 +53,18 @@ public class Solution
 
                 current.next = current.next.next;
 			}
-
-            current= current.next;
+			else
+			{
+				current = current.next;
+			}
 		}
 
-        current.next= head2;
+       if(current==dummyHead)
+			head = head2;
+		else
+        	current.next= head2;
 
 
-		return head;
-
-	}
-
-
-	}
+		return head;    
+    }
+}
