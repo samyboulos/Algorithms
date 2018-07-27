@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Algorithms
 {
-    class DFS : IAlgorithm
+    public class DFS : IAlgorithm
     {
 
         Stack<Vertex> stack = new Stack<Vertex>();
-        List<Vertex> Visited = new List<Vertex>();
+
         Vertex A = new Vertex('A');
         Vertex B = new Vertex('B');
         Vertex C = new Vertex('C');
@@ -20,6 +20,8 @@ namespace Algorithms
         Vertex F = new Vertex('F');
         Vertex G = new Vertex('G');
         Vertex H = new Vertex('H');
+
+
 
         private void InitGraph()
         {
@@ -45,24 +47,27 @@ namespace Algorithms
         public void Run()
         {
             InitGraph();
+            Console.WriteLine("Iterative");
             DoDFS();
+
+            //DoDFSRecursive(A);
         }
 
 
         private void DoDFS()
         {
-            Visited.Add(A);
+            A.Visited = true;
             Console.WriteLine(A.Name);
             stack.Push(A);
 
             while (stack.Count > 0)
             {
                 var top = stack.Peek();
-                var unvisited = top.Adjacent.Where(r => !Visited.Contains(r));
+                var unvisited = top.Adjacent.Where(r => r.Visited==false);
                 if (unvisited.Any())
                 {
                     var next = unvisited.First();
-                    Visited.Add(next);
+                    next.Visited = true;
                     Console.WriteLine(next.Name);
                     stack.Push(next);
                 }
@@ -73,7 +78,19 @@ namespace Algorithms
             }
         }
 
-       
+        private void DoDFSRecursive(Vertex v)
+        {
+            if (v.Visited)
+                return;
+
+            v.Visited = true;
+            Console.WriteLine(v.Name);
+
+            foreach (var child in v.Adjacent)
+            {
+                DoDFSRecursive(child);
+            }
+        }
 
 
     }
