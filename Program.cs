@@ -5,7 +5,7 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            IAlgorithm a = new DFS();
+            IAlgorithm a = new RemoveDupFromSortedArray();
             a.Run();
         }
     }

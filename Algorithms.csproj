@@ -51,6 +51,8 @@
     <Compile Include="Algorithms\BinarySearch.cs" />
     <Compile Include="Algorithms\DP\ClimbStairs.cs" />
     <Compile Include="Algorithms\List\PartitionList.cs" />
+    <Compile Include="Algorithms\List\RemoveDuplicatesFromSortedList.cs" />
+    <Compile Include="Algorithms\RemoveDupFromSortedArray.cs" />
     <Compile Include="Algorithms\SubarraySum.cs" />
     <Compile Include="Algorithms\MaxSubarrayProduct.cs" />
     <Compile Include="Algorithms\List\DeleteNodes.cs" />
