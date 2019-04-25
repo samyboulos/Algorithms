@@ -28,9 +28,8 @@ namespace Algorithms
                 }
                 else
                     x++;  //Proceed
-
             }
-
+            
             return x;
         }
     }
