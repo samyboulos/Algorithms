@@ -5,7 +5,7 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            IAlgorithm a = new RemoveElement();
+            IAlgorithm a = new StringIndexOf();
             a.Run();
         }
     }

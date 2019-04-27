@@ -45,6 +45,9 @@
     <Compile Include="Algorithms\CompressString.cs" />
     <Compile Include="Algorithms\DP\CoinChange.cs" />
     <Compile Include="Algorithms\DP\HouseRobber.cs" />
+    <Compile Include="Algorithms\Easy\LongestCommonPrefix.cs" />
+    <Compile Include="Algorithms\Easy\SearchInsertPosition.cs" />
+    <Compile Include="Algorithms\Easy\StringIndexOf.cs" />
     <Compile Include="Algorithms\IAlgorithm.cs" />
     <Compile Include="Algorithms\Graph\BFS.cs" />
     <Compile Include="Algorithms\Adder.cs" />
@@ -52,8 +55,8 @@
     <Compile Include="Algorithms\DP\ClimbStairs.cs" />
     <Compile Include="Algorithms\List\PartitionList.cs" />
     <Compile Include="Algorithms\List\RemoveDuplicatesFromSortedList.cs" />
-    <Compile Include="Algorithms\RemoveDupFromSortedArray.cs" />
-    <Compile Include="Algorithms\RemoveElement.cs" />
+    <Compile Include="Algorithms\Easy\RemoveDupFromSortedArray.cs" />
+    <Compile Include="Algorithms\Easy\RemoveElement.cs" />
     <Compile Include="Algorithms\SubarraySum.cs" />
     <Compile Include="Algorithms\MaxSubarrayProduct.cs" />
     <Compile Include="Algorithms\List\DeleteNodes.cs" />
